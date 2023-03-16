@@ -19,7 +19,7 @@ const ProfileID = require('./controllers/ProfileID');
 const Image= require('./controllers/Image');
 
 const knex = require('knex')({
-  client: 'postgres://nongporloris:tgjKsHlh6qYSlE4YrGqKHNi9CxojiNQL@dpg-cg9h7v9mbg54mbf2cqf0-a/smartbrain_3pnt',
+  client: 'pg',
   connection: {
     host : 'dpg-cg9h7v9mbg54mbf2cqf0-a',
     port : 5432,
@@ -113,7 +113,7 @@ app.put('/image',(req,res) =>{Image.handleImage(req,res,knex)})
 //     // res = false
 // });
 
-app.listen(3001, () =>{
+app.listen(process.env.PORT || 3001, () =>{
 	console.log('app is running on port 3,001');
 });
 
