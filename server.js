@@ -19,13 +19,13 @@ const ProfileID = require('./controllers/ProfileID');
 const Image= require('./controllers/Image');
 
 const knex = require('knex')({
-  client: 'pg',
+  client: 'postgres://nongporloris:tgjKsHlh6qYSlE4YrGqKHNi9CxojiNQL@dpg-cg9h7v9mbg54mbf2cqf0-a/smartbrain_3pnt',
   connection: {
-    host : '13.228.225.19',
+    host : 'dpg-cg9h7v9mbg54mbf2cqf0-a',
     port : 5432,
-    user : 'postgres',
-    password : '13579',
-    database : 'smart-brain'
+    user : 'nongporloris',
+    password : 'tgjKsHlh6qYSlE4YrGqKHNi9CxojiNQL',
+    database : 'smartbrain_3pnt'
   }
 });
 
